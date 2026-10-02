@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin · Ebis Wig Store</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#2c1e12">
+<link rel="apple-touch-icon" href="icon-512.png">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="logo">EBIS<span>WIGS</span></a>
+    <nav>
+      <a href="index.html"><i class="fas fa-store"></i> View store</a>
+      <a href="admin.html" class="admin-link active"><i class="fas fa-upload"></i> Admin</a>
+    </nav>
+    <div class="nav-icons">
+      <i class="fas fa-cog"></i>
+    </div>
+  </div>
+</header>
+
+<section class="admin-section">
+  <div class="container">
+    <h1 class="admin-title">Upload a new wig</h1>
+    <p class="admin-sub">Add a photo or video, fill in the details, and it appears on your store instantly.</p>
+
+    <div class="admin-layout">
+
+      <form class="admin-form" id="productForm">
+        <div class="form-group">
+          <label>Wig name *</label>
+          <input type="text" id="productName" placeholder="e.g. Silky Straight Lace" required>
+        </div>
+
+        <div class="form-group">
+          <label>Short description *</label>
+          <input type="text" id="productDesc" placeholder="e.g. HD lace front · 180% density" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Price (ETB) *</label>
+            <input type="number" id="productPrice" placeholder="e.g. 8500" required min="0" step="1">
+          </div>
+          <div class="form-group">
+            <label>Old price (ETB, optional)</label>
+            <input type="number" id="productOldPrice" placeholder="e.g. 11000" min="0" step="1">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Tag (optional)</label>
+          <input type="text" id="productTag" placeholder="e.g. New, Bestseller, Limited">
+        </div>
+
+        <div class="form-group">
+          <label>Product photo or video *</label>
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="fileInput" accept="image/*,video/*" hidden>
+            <div class="upload-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+            <h3>Click or drag your photo / video here</h3>
+            <p class="upload-hint">JPG, PNG, MP4, MOV · max 10MB</p>
+          </div>
+          <div class="upload-preview" id="uploadPreview"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-primary" id="submitBtn">
+            <i class="fas fa-plus-circle"></i> Add product
+          </button>
+          <button type="button" class="btn-outline" id="resetBtn">
+            <i class="fas fa-redo"></i> Reset
+          </button>
+        </div>
+      </form>
+
+      <div class="admin-list">
+        <div class="admin-list-header">
+          <h3>Your products (<span id="productCount">0</span>)</h3>
+        </div>
+        <div class="admin-products" id="adminProducts">
+          <div class="admin-empty">Loading…</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="copyright">
+      © 2025 Ebis Wig Store · Admin panel
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

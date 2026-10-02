@@ -1,0 +1,25 @@
+{
+  "name": "Ebis Wig Store",
+  "short_name": "Ebis Wigs",
+  "description": "Premium wigs and hair extensions for the modern queen.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fefcf8",
+  "theme_color": "#2c1e12",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
